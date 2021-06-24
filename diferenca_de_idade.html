@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+	function mostra(texto){
+		document.write(texto);
+		pulaLinha();
+	}
+	function diferencaIdade(idade1, idade2){
+		var diferenca = idade1 - idade2;
+		mostra("A diferença de idade é de " + diferenca + " anos.");
+	}
+
+	diferencaIdade(24,20);
+</script>

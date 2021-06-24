@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+    function sorteia(){
+    	var n = parseInt(prompt("Você quer sortear um número de 0 a quanto?"));
+		return Math.round(Math.random()*n);
+    }
+
+    var numeroPensado = sorteia();
+    var tentativaMaxima = 3;
+
+    for(tentativaAtual = 1; tentativaAtual <= tentativaMaxima; tentativaAtual++){
+        var chute = parseInt(prompt("Tentativa "+ tentativaAtual + " de "+ tentativaMaxima + "\nQual número você acha que é? "))
+        if (numeroPensado==chute){
+            mostra("Você Acertou! Era o número "+ numeroPensado);
+            break;
+        }else{
+            if(numeroPensado>chute){
+                alert("Você Errou! Eu pensei em um número maior.");
+            }else{
+                alert("Você Errou! Eu pensei em um número menor.");
+            }
+            if(tentativaAtual==tentativaMaxima){
+                alert("Número de tentativas excedido. Você perdeu!");
+            }
+        }
+    }
+
+    
+</script>
